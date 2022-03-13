@@ -1,0 +1,49 @@
+{
+  "name": "@monorepo/ui-kit",
+  "packageManager": "yarn@3.2.0",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "watch": "rollup -c -w",
+    "build": "rollup -c"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@emotion/babel-preset-css-prop": "^11.2.0",
+    "@emotion/css": "^11.7.1",
+    "@emotion/react": "^11.8.2",
+    "@mdx-js/react": "^1.6.22",
+    "@rollup/plugin-commonjs": "^21.0.2",
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "@rollup/plugin-typescript": "^8.3.1",
+    "@storybook/addon-actions": "^6.4.19",
+    "@storybook/addon-docs": "^6.4.19",
+    "@storybook/addon-essentials": "^6.4.19",
+    "@storybook/addon-links": "^6.4.19",
+    "@storybook/react": "^6.4.19",
+    "@storybook/testing-library": "^0.0.9",
+    "@types/react": "^17.0.40",
+    "@types/react-dom": "^17.0.13",
+    "@types/rollup-plugin-peer-deps-external": "^2.2.1",
+    "babel-loader": "^8.2.3",
+    "fs-extra": "^10.0.1",
+    "postcss": "^8.4.8",
+    "rollup": "^2.68.0",
+    "rollup-plugin-dts": "^4.1.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "ts-loader": "^9.2.8",
+    "tslib": "^2.3.1",
+    "typescript": "^4.6.2"
+  }
+}
