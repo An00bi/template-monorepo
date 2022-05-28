@@ -1,6 +1,6 @@
 import * as React from "react"
 import Link from "next/link"
-import { Label } from "@monorepo/ui-kit"
+import { Icon, Label } from "@monorepo/ui-kit"
 
 interface Props {
   posts: any[]
@@ -10,6 +10,7 @@ const BlogIndex = ({ posts }: Props) => {
   return (
     <div>
       <Label color="alabaster">Sono una label</Label>
+      <Icon name="CodeBrackets" />
       <h1>Acme&apos;s blog</h1>
       <ul>
         {posts.map((post) => (

@@ -1,13 +1,13 @@
 import React from "react"
-import { ThemeProvider } from "@emotion/react"
-import { theme } from "../src/theme"
-import { Reset } from "../src/theme/Reset"
+import { theme } from "@/theme"
+import CustomThemeProvider from "@/style/CustomThemeProvider"
+import { Reset } from "@/style/Reset"
 
 export const decorators = [
   (Story) => (
-    <ThemeProvider theme={theme}>
+    <CustomThemeProvider theme={theme}>
       <Reset />
       <Story />
-    </ThemeProvider>
+    </CustomThemeProvider>
   ),
 ]
