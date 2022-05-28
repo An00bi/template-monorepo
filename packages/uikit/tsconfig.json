@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "target": "es5",
     "module": "esnext",
     "jsx": "react-jsx",
@@ -15,5 +19,6 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "emitDeclarationOnly": true
-  }
+  },
+  "exclude": ["node_modules", "dist"]
 }

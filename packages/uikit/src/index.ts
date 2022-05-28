@@ -1,1 +1,1 @@
-export { default as Label } from "./basic/Label";
+export { default as Label } from "./components/Atoms/Label"

@@ -2,33 +2,39 @@ import resolve from "@rollup/plugin-node-resolve"
 import commonjs from "@rollup/plugin-commonjs"
 import typescript from "@rollup/plugin-typescript"
 import external from "rollup-plugin-peer-deps-external"
-import postcss from "rollup-plugin-postcss"
 import dts from "rollup-plugin-dts"
 import packageJson from "./package.json"
+import path from "path"
+import alias from "@rollup/plugin-alias"
+
+const projectRootDir = path.resolve(__dirname)
 
 const config = [
   {
     input: "src/index.ts",
     output: [
       {
-        file: packageJson.main,
-        format: "cjs",
-        sourcemap: true,
-        name: "react-ts-lib",
-      },
-      {
         file: packageJson.module,
         format: "esm",
         sourcemap: true,
       },
     ],
-    plugins: [external(), resolve(), commonjs(), typescript({ tsconfig: "./tsconfig.json" }), postcss()],
+    plugins: [external(), commonjs(), resolve(), typescript({ tsconfig: "./tsconfig.json" })],
   },
   {
     input: "dist/esm/types/index.d.ts",
-    output: [{ file: "dist/index.d.ts", format: "esm" }],
-    external: [/\.css$/],
-    plugins: [dts()],
+    output: [{ file: "dist/uikit.d.ts", format: "es" }],
+    plugins: [
+      alias({
+        entries: [
+          {
+            find: "@",
+            replacement: path.resolve(projectRootDir, "./src"),
+          },
+        ],
+      }),
+      dts(),
+    ],
   },
 ]
 
