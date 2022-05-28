@@ -9,7 +9,7 @@ interface Props {
 const BlogIndex = ({ posts }: Props) => {
   return (
     <div>
-      <Label />
+      <Label color="alabaster">Sono una label</Label>
       <h1>Acme&apos;s blog</h1>
       <ul>
         {posts.map((post) => (
