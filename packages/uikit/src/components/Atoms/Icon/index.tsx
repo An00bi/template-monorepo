@@ -1,12 +1,13 @@
 import React from "react"
-import * as icons from "./icons"
+import * as iconsComponents from "./icons"
 
 export interface IconI {
-  name: "CodeBrackets" | "Comments"
+  name: IconsNamesT
 }
 
-const Icon = ({ name = "CodeBrackets" }: IconI) => {
-  return <span>{icons[name]()}</span>
+const Icon = ({ name }: IconI) => {
+  if (!name) return <></>
+  return <span>{iconsComponents[name]()}</span>
 }
 
 export default Icon

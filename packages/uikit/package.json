@@ -12,7 +12,9 @@
     "build-storybook": "build-storybook",
     "watch": "rollup -c -w",
     "build": "rollup -c",
-    "icons": "npx @svgr/cli -d ./src/components/Atoms/Icon/icons ./src/components/Atoms/Icon/svg"
+    "icons:generate": "npx @svgr/cli -d ./src/components/Atoms/Icon/icons ./src/components/Atoms/Icon/svg",
+    "icons:data": "npx ts-node ./src/components/Atoms/Icon/generateIconsData.ts",
+    "icons:all": "yarn icons:generate && yarn icons:data"
   },
   "peerDependencies": {
     "@emotion/react": "^11.8.2",
@@ -36,6 +38,7 @@
     "@storybook/react": "^6.4.19",
     "@storybook/testing-library": "^0.0.9",
     "@svgr/cli": "^6.2.1",
+    "@types/node": "^17.0.36",
     "@types/react": "^17.0.40",
     "@types/react-dom": "^17.0.13",
     "@types/rollup-plugin-peer-deps-external": "^2.2.1",

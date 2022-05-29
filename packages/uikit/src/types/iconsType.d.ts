@@ -1,0 +1,1 @@
+type IconsNamesT = "Comments" | "Direction"
