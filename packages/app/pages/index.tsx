@@ -9,7 +9,7 @@ interface Props {
 const BlogIndex = ({ posts }: Props) => {
   return (
     <div>
-      <Label color="">Test</Label>
+      <Label color="alabaster">Test</Label>
       <Icon name="Comments" />
       <h1>Acme&apos;s blog</h1>
       <ul>
