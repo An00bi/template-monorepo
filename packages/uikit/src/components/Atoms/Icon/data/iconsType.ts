@@ -1,1 +1,1 @@
-export type IconsNamesT = "Comments" | "Direction" 
+export type IconsNamesT = "Comments" | "Direction"

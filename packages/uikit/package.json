@@ -12,8 +12,8 @@
     "build-storybook": "build-storybook",
     "watch": "rollup -c -w",
     "build": "rollup -c",
-    "icons:generate": "npx @svgr/cli -d ./src/components/Atoms/Icon/icons ./src/components/Atoms/Icon/svg",
-    "icons:data": "npx ts-node ./src/components/Atoms/Icon/generateIconsData.ts",
+    "icons:generate": "npx @svgr/cli ./src/components/Atoms/Icon/svg",
+    "icons:data": "npx ts-node ./script/generateIconsData.ts",
     "icons:all": "yarn icons:generate && yarn icons:data"
   },
   "peerDependencies": {
