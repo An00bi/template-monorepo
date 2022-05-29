@@ -39,8 +39,8 @@ Commands:
 
 ⚠️ Rollup and Rollup plugins update may break aliases (don't know why). Tried to update to this versions but not working as expected ¯\_(ツ)\_/¯ ⚠️
 
-> "@rollup/plugin-commonjs": "^21.0.2",
-> "@rollup/plugin-node-resolve": "^13.1.3",
-> "@rollup/plugin-typescript": "^8.3.1",
-> "rollup": "^2.68.0",
+> "@rollup/plugin-commonjs": "^21.0.2",  
+> "@rollup/plugin-node-resolve": "^13.1.3",  
+> "@rollup/plugin-typescript": "^8.3.1",  
+> "rollup": "^2.68.0",  
 > "rollup-plugin-dts": "^4.1.0",
