@@ -10,6 +10,7 @@ const BlogIndex = ({ posts }: Props) => {
   return (
     <div>
       <Label color="alabaster">Sono una label</Label>
+      <Icon name="Comments" />
       <h1>Acme&apos;s blog</h1>
       <ul>
         {posts.map((post) => (

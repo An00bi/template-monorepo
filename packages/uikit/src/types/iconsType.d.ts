@@ -1,1 +1,0 @@
-type IconsNamesT = "Comments" | "Direction"

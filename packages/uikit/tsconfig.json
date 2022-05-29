@@ -18,8 +18,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "emitDeclarationOnly": true,
-    "typeRoots": ["./src/types", "./node_modules/@types"]
+    "emitDeclarationOnly": true
   },
   "exclude": ["node_modules", "dist"]
 }

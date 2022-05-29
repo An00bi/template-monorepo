@@ -1,4 +1,5 @@
 import React from "react"
+import { IconsNamesT } from "./data/iconsType"
 import * as iconsComponents from "./icons"
 
 export interface IconI {

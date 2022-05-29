@@ -2,8 +2,8 @@
 const fs = require("fs")
 const path = require("path")
 
-const iconsNamesPath = path.join(__dirname, "./iconsNames.ts")
-const iconsTypePath = "./src/types/iconsType.d.ts"
+const iconsNamesPath = path.join(__dirname, "./data/iconsNames.ts")
+const iconsTypePath = path.join(__dirname, "./data/iconsType.ts")
 
 try {
   fs.unlinkSync(iconsNamesPath)
@@ -17,6 +17,11 @@ try {
   console.log(`🔧 [2/4] iconsType file removed.`)
 } catch (err) {
   console.log(`🔧 [2/4] iconsType file not found, nothing to remove.`)
+}
+
+const dataDir = path.join(__dirname, "/data")
+if (!fs.existsSync(dataDir)) {
+  fs.mkdirSync(dataDir)
 }
 
 const svgIconsPath = path.join(__dirname, "icons")
