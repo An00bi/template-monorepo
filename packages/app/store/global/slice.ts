@@ -18,7 +18,6 @@ export const globalSlice = createSlice({
   },
 })
 
-// Exports all actions
 export const { setLang } = globalSlice.actions
 
 export default globalSlice.reducer
